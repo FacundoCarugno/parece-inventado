@@ -75,8 +75,8 @@ def crear_servidor():
             if p.get("access_token") != estado.token:
                 return self._resp(401, {"error": {"message": "Invalid OAuth access token"}})
             f = estado.fallos
-            if metodo == "GET" and partes == ["me"]:
-                return self._resp(200, {"user_id": "17840000000000001", "username": "cuenta_prueba"})
+            if metodo == "GET" and partes == ["17840000000000001"]:
+                return self._resp(200, {"id": "17840000000000001", "username": "cuenta_prueba"})
             if metodo == "POST" and len(partes) == 2 and partes[1] == "media":
                 if f.get("create_500", 0) > 0:
                     f["create_500"] -= 1

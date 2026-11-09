@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publica en Instagram el Reel del día (API oficial «Instagram API with Instagram Login», graph.instagram.com).
+"""Publica en Instagram el Reel del día (API oficial de Instagram: Graph API de Meta con inicio de sesión unificado).
 
     python publish.py              publica el Reel que toque hoy (espera hasta las 19:00 de Buenos Aires)
     python publish.py --dry-run    valida el próximo video y su URL pública, sin publicar nada
@@ -7,7 +7,8 @@
     python publish.py --status     muestra el calendario y el estado de cada día
     python publish.py --whoami     comprueba el token (devuelve el usuario de Instagram)
 
-Secretos (variables de entorno, en GitHub Secrets): IG_ACCESS_TOKEN e IG_USER_ID. Nunca se imprimen.
+Secretos (variables de entorno, en GitHub Secrets): IG_ACCESS_TOKEN (token de usuario del sistema, no vence) e
+IG_USER_ID (ID de la cuenta de Instagram). Nunca se imprimen.
 `schedule.json` es el calendario y el estado: se guarda después de cada paso para poder recuperarse si se corta.
 Reglas: como máximo un Reel por fecha de Buenos Aires; nunca se salta un día (si uno se atrasa, se publica tarde);
 antes de crear o publicar nada se revisan los últimos medios de la cuenta para no duplicar.
@@ -38,7 +39,7 @@ class Fallo(Exception):
 
 # ---------------------------------------------------------------- utilidades
 def api_base():
-    return os.environ.get("META_BASE", "https://graph.instagram.com/v21.0").rstrip("/")
+    return os.environ.get("META_BASE", "https://graph.facebook.com/v21.0").rstrip("/")
 
 
 def ahora():
@@ -115,9 +116,9 @@ def api(metodo, ruta, params=None, reintentar=True):
 
 def usuario():
     uid = os.environ.get("IG_USER_ID", "").strip()
-    if uid:
-        return uid
-    return str(api("GET", "me", {"fields": "user_id"})["user_id"])
+    if not uid:
+        raise Fallo("Falta el secreto IG_USER_ID (el ID de la cuenta de Instagram).")
+    return uid
 
 
 # ---------------------------------------------------------------- validación del video
@@ -287,8 +288,9 @@ def ejecutar(argv=None):
         mostrar(cal)
         return 0
     if a.whoami:
-        r = api("GET", "me", {"fields": "user_id,username"})
-        print(f"Token válido: @{r.get('username')} (user_id {r.get('user_id')})")
+        uid = usuario()
+        r = api("GET", uid, {"fields": "id,username"})
+        print(f"Token válido: @{r.get('username')} (id {r.get('id')})")
         return 0
 
     hoy = ahora().date()
