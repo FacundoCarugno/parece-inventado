@@ -1,0 +1,63 @@
+name: Publicar Reel del día
+
+on:
+  schedule:
+    - cron: "40 21 * * *" # 18:40 Argentina (UTC-3): el script espera hasta las 19:00
+    - cron: "30 22 * * *" # 19:30 Argentina: respaldo por si la primera no corrió o falló
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Solo validar (no publica)"
+        type: boolean
+        default: false
+      force:
+        description: "No esperar a las 19:00 ni mirar la fecha (pruebas)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Publicar
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "${{ inputs.force }}" = "true" ]; then ARGS="$ARGS --force"; fi
+          python publish.py $ARGS
+      - name: Guardar estado y registros
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add schedule.json logs || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Estado de publicación $(TZ=America/Argentina/Buenos_Aires date +%F_%H:%M)"
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+          fi
+      - name: Abrir un Issue si falló
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Falló la publicación del $(TZ=America/Argentina/Buenos_Aires date +%d/%m/%Y)" \
+            --body "La publicación automática falló. Registro: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. No se saltó ningún día: se vuelve a intentar en la próxima ejecución."
