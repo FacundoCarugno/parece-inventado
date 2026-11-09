@@ -38,8 +38,14 @@ class Fallo(Exception):
 
 
 # ---------------------------------------------------------------- utilidades
+def es_token_instagram():
+    """Los tokens de usuario de Instagram empiezan con «IG» y van a graph.instagram.com; los de sistema, a graph.facebook.com."""
+    return os.environ.get("IG_ACCESS_TOKEN", "").strip().startswith("IG")
+
+
 def api_base():
-    return os.environ.get("META_BASE", "https://graph.facebook.com/v21.0").rstrip("/")
+    defecto = "https://graph.instagram.com/v21.0" if es_token_instagram() else "https://graph.facebook.com/v21.0"
+    return os.environ.get("META_BASE", defecto).rstrip("/")
 
 
 def ahora():
