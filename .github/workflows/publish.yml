@@ -2,8 +2,8 @@ name: Publicar Reel del día
 
 on:
   schedule:
-    - cron: "40 21 * * *" # 18:40 Argentina (UTC-3): el script espera hasta las 19:00
-    - cron: "30 22 * * *" # 19:30 Argentina: respaldo por si la primera no corrió o falló
+    - cron: "5 21 * * *" # 18:05 Argentina (UTC-3): GitHub suele largarlo con 30-50 min de demora; el script espera hasta las 19:00
+    - cron: "40 22 * * *" # 19:40 Argentina: respaldo por si la primera no corrió o falló
   workflow_dispatch:
     inputs:
       dry_run:
