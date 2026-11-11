@@ -8,3 +8,9 @@
 [2026-11-10 19:01:18 AR] Historia 1 publicada (media_publish): media 17955347061334845
 [2026-11-10 19:01:21 AR]   comentario publicado (18101016764452912). Fijarlo: a mano desde la app (la API no lo permite).
 [2026-11-10 20:13:23 AR] Hoy ya se publicó un Reel: no publico otro.
+[2026-11-11 19:05:26 AR] Historia 2 «Los colocadores de bolos» (planeada 2026-11-11, intento 1).
+[2026-11-11 19:05:26 AR]   video OK: h264 1080x1920 20.7s 12.0 MB
+[2026-11-11 19:05:27 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-02.mp4
+[2026-11-11 19:05:30 AR]   contenedor creado: 18129894109884770
+[2026-11-11 19:07:05 AR] Historia 2 publicada (media_publish): media 17904743673373945
+[2026-11-11 19:07:07 AR]   comentario publicado (18101544062409909). Fijarlo: a mano desde la app (la API no lo permite).
