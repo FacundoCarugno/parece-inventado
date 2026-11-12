@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hoy · Parece Inventado</title>
+<style>
+  :root { --bg:#fbf4e2; --tx:#1d1a22; --card:#fff; --linea:#e3d6b5; --acento:#e2523b; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#17151c; --tx:#f1ece2; --card:#24212b; --linea:#3a3542; } }
+  body { margin:0; font-family:system-ui,sans-serif; background:var(--bg); color:var(--tx); }
+  main { max-width:640px; margin:0 auto; padding:20px 16px 60px; }
+  h1 { font-size:22px; margin:0 0 4px; } .sub { opacity:.75; margin:0 0 18px; }
+  section { background:var(--card); border:1px solid var(--linea); border-radius:14px; padding:14px; margin:14px 0; }
+  h2 { font-size:16px; margin:0 0 8px; }
+  pre { white-space:pre-wrap; word-wrap:break-word; font:15px/1.45 system-ui,sans-serif; margin:0 0 12px; max-height:240px; overflow:auto; }
+  button { width:100%; font-size:18px; font-weight:700; padding:14px; border:0; border-radius:10px; background:var(--acento); color:#fff; }
+  button.hecho { background:#2e8b57; }
+  ol { padding-left:20px; } li { margin:4px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="titulo">Cargando…</h1>
+  <p class="sub" id="fecha"></p>
+  <section>
+    <h2>1. Descripción (para TikTok)</h2>
+    <pre id="caption"></pre>
+    <button data-copia="caption">Copiar descripción</button>
+  </section>
+  <section>
+    <h2>2. Comentario para fijar (TikTok e Instagram)</h2>
+    <pre id="comentario"></pre>
+    <button data-copia="comentario">Copiar comentario</button>
+  </section>
+  <section>
+    <h2>Cómo publicar en TikTok</h2>
+    <ol>
+      <li>Abrí TikTok: te llegó una notificación de que hay un video listo para editar (o buscalo en la bandeja de entrada).</li>
+      <li>Tocá <b>Siguiente</b>, pegá la descripción y tocá <b>Publicar</b>.</li>
+      <li>Abrí el video publicado, pegá el comentario, publicalo, mantenelo apretado y tocá <b>Fijar</b>.</li>
+      <li>En Instagram el comentario ya está puesto: solo mantenelo apretado y tocá <b>Fijar</b>.</li>
+    </ol>
+  </section>
+</main>
+<script>
+  const ahoraAR = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
+  fetch("schedule.json?t=" + Date.now()).then(r => r.json()).then(cal => {
+    const dias = cal.days.filter(d => d.date <= ahoraAR && (d.tiktok_status === "sent" || d.publish_status === "published"));
+    const d = dias[dias.length - 1] || cal.days[0];
+    document.getElementById("titulo").textContent = d.caption.split("\n")[0];
+    document.getElementById("fecha").textContent = "Publicación del " + d.date.split("-").reverse().join("/") + " a las 19:00";
+    document.getElementById("caption").textContent = d.caption;
+    document.getElementById("comentario").textContent = d.first_comment || "";
+  }).catch(() => { document.getElementById("titulo").textContent = "No pude cargar el calendario. Recargá la página."; });
+  document.querySelectorAll("button[data-copia]").forEach(b => b.onclick = async () => {
+    const t = document.getElementById(b.dataset.copia).textContent;
+    try { await navigator.clipboard.writeText(t); } catch (e) {
+      const a = document.createElement("textarea"); a.value = t; document.body.appendChild(a); a.select(); document.execCommand("copy"); a.remove();
+    }
+    b.textContent = "¡Copiado!"; b.classList.add("hecho");
+  });
+</script>
+</body>
+</html>

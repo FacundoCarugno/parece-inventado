@@ -5,6 +5,7 @@ on:
     paths:
       - "schedule.json"
       - "publish.py"
+      - "tiktok.py"
       - "tests/**"
       - "videos/**"
       - ".github/workflows/**"
@@ -27,6 +28,12 @@ jobs:
         env:
           URL_WAIT: "600"
         run: python publish.py --dry-run --force --no-wait
+      - name: Chequeo de TikTok (si está conectado)
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_KEY: ${{ secrets.TIKTOK_KEY }}
+        run: python tiktok.py --check
       - name: Chequeo del token (whoami)
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
