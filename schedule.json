@@ -21,7 +21,11 @@
       "comment_id": "18101016764452912",
       "pin_status": "not_supported_by_api",
       "attempts": 1,
-      "errors": []
+      "errors": [],
+      "tiktok_status": "sent",
+      "tiktok_publish_id": "v_inbox_file~v2.7707299487714527253",
+      "tiktok_sent_at": "2026-11-12T11:59:43-03:00",
+      "tiktok_puesta_al_dia": true
     },
     {
       "day": 2,
@@ -41,7 +45,11 @@
       "comment_id": "18101544062409909",
       "pin_status": "not_supported_by_api",
       "attempts": 1,
-      "errors": []
+      "errors": [],
+      "tiktok_status": "sent",
+      "tiktok_publish_id": "v_inbox_file~v2.7707299698721179669",
+      "tiktok_sent_at": "2026-11-12T12:00:13-03:00",
+      "tiktok_puesta_al_dia": true
     },
     {
       "day": 3,

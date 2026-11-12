@@ -168,7 +168,7 @@ def ejecutar(argv=None):
     t = renovar_si_hace_falta(t)
     hoy = publish.ahora().date()
     dias = cal["days"]
-    if not a.force and any(x.get("tiktok_sent_at") and publish.fecha_de(x["tiktok_sent_at"]) == hoy for x in dias):
+    if not a.force and any(x.get("tiktok_sent_at") and not x.get("tiktok_puesta_al_dia") and publish.fecha_de(x["tiktok_sent_at"]) == hoy for x in dias):
         publish.log("TikTok: hoy ya se mandó un borrador.")
         return 0
     d = next((x for x in dias if x["day"] >= desde and x.get("publish_status") == "published" and x.get("tiktok_status") != "sent"), None)
