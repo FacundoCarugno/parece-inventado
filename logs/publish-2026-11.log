@@ -26,3 +26,13 @@
 [2026-11-12 19:01:32 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
 [2026-11-12 20:17:48 AR] Hoy ya se publicó un Reel: no publico otro.
 [2026-11-12 20:17:48 AR] TikTok: hoy ya se mandó un borrador.
+[2026-11-13 18:44:26 AR] Espero 933 s hasta las 19:00.
+[2026-11-13 19:00:00 AR] Historia 4 «La piña de alquiler» (planeada 2026-11-13, intento 1).
+[2026-11-13 19:00:00 AR]   video OK: h264 1080x1920 21.7s 19.7 MB
+[2026-11-13 19:00:01 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-04.mp4
+[2026-11-13 19:00:04 AR]   contenedor creado: 18130321069884770
+[2026-11-13 19:00:47 AR] Historia 4 publicada (media_publish): media 17918891118495774
+[2026-11-13 19:00:49 AR]   comentario publicado (17969440545237210). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-13 19:00:50 AR]   TikTok: token renovado (guardado cifrado).
+[2026-11-13 19:00:50 AR] TikTok: mando la historia 4 como borrador.
+[2026-11-13 19:01:27 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
