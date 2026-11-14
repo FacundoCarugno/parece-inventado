@@ -52,6 +52,18 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TIKTOK_KEY: ${{ secrets.TIKTOK_KEY }}
         run: python tiktok.py
+      - name: Mandar por mail la descripción y el comentario
+        if: always() && inputs.dry_run != true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python aviso.py
+          if [ -f aviso_cuerpo.md ]; then
+            URL=$(gh issue create --title "$(cat aviso_titulo.txt)" --body-file aviso_cuerpo.md --assignee "${{ github.repository_owner }}" --label "aviso diario" 2>/dev/null \
+              || gh issue create --title "$(cat aviso_titulo.txt)" --body-file aviso_cuerpo.md --assignee "${{ github.repository_owner }}")
+            gh issue close "$URL" --reason completed
+            rm -f aviso_titulo.txt aviso_cuerpo.md
+          fi
       - name: Guardar estado y registros
         if: always()
         run: |

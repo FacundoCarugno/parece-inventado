@@ -1,3 +1,5 @@
 __pycache__/
 *.tmp
 videos/*.txt
+aviso_titulo.txt
+aviso_cuerpo.md
