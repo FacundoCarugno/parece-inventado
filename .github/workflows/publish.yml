@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: "5 21 * * *" # 18:05 Argentina (UTC-3): GitHub suele largarlo con 30-50 min de demora; el script espera hasta las 19:00
     - cron: "40 22 * * *" # 19:40 Argentina: respaldo por si la primera no corrió o falló
+    - cron: "20 23 * * *" # 20:20 Argentina: segundo respaldo (GitHub a veces saltea ejecuciones programadas)
+    - cron: "10 0 * * *" # 21:10 Argentina: tercer respaldo
   workflow_dispatch:
     inputs:
       dry_run:
