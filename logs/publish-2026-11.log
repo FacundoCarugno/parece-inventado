@@ -38,3 +38,12 @@
 [2026-11-13 19:01:27 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
 [2026-11-13 20:16:23 AR] Hoy ya se publicó un Reel: no publico otro.
 [2026-11-13 20:16:23 AR] TikTok: hoy ya se mandó un borrador.
+[2026-11-14 19:51:52 AR] Historia 5 «El hielo que viajó a la India» (planeada 2026-11-14, intento 1).
+[2026-11-14 19:51:52 AR]   video OK: h264 1080x1920 23.7s 16.5 MB
+[2026-11-14 19:51:53 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-05.mp4
+[2026-11-14 19:51:55 AR]   contenedor creado: 18130565164884770
+[2026-11-14 19:52:56 AR] Historia 5 publicada (media_publish): media 18088011161329803
+[2026-11-14 19:52:58 AR]   comentario publicado (18123028540996508). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-14 19:52:59 AR]   TikTok: token renovado (guardado cifrado).
+[2026-11-14 19:52:59 AR] TikTok: mando la historia 5 como borrador.
+[2026-11-14 19:53:37 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
