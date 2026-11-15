@@ -2,10 +2,11 @@ name: Publicar Reel del día
 
 on:
   schedule:
-    - cron: "5 21 * * *" # 18:05 Argentina (UTC-3): GitHub suele largarlo con 30-50 min de demora; el script espera hasta las 19:00
-    - cron: "40 22 * * *" # 19:40 Argentina: respaldo por si la primera no corrió o falló
-    - cron: "20 23 * * *" # 20:20 Argentina: segundo respaldo (GitHub a veces saltea ejecuciones programadas)
-    - cron: "10 0 * * *" # 21:10 Argentina: tercer respaldo
+    # GitHub demora o saltea a veces las ejecuciones programadas (el 14 y 15/11 llegaron con horas de atraso).
+    # Por eso hay muchos intentos: el script publica como máximo un Reel por fecha, así que nunca duplica.
+    - cron: "5 21 * * *" # 18:05 Argentina (UTC-3): espera hasta las 19:00
+    - cron: "*/15 22-23 * * *" # 19:00 a 20:45 Argentina, cada 15 minutos
+    - cron: "*/20 0-2 * * *" # 21:00 a 23:40 Argentina, cada 20 minutos
   workflow_dispatch:
     inputs:
       dry_run:
