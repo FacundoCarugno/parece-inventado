@@ -55,3 +55,12 @@
 [2026-11-14 23:46:06 AR] TikTok: hoy ya se mandó un borrador.
 [2026-11-15 03:18:22 AR] Faltan 15:41:37.360229 para las 19:00: demasiado temprano.
 [2026-11-15 03:18:22 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
+[2026-11-15 19:47:14 AR] Historia 6 «La mujer que vendía la hora» (planeada 2026-11-15, intento 1).
+[2026-11-15 19:47:14 AR]   video OK: h264 1080x1920 21.2s 17.6 MB
+[2026-11-15 19:47:14 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-06.mp4
+[2026-11-15 19:47:17 AR]   contenedor creado: 18130758292884770
+[2026-11-15 19:48:07 AR] Historia 6 publicada (media_publish): media 18100795328449586
+[2026-11-15 19:48:09 AR]   comentario publicado (18120090812007600). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-15 19:48:09 AR]   TikTok: token renovado (guardado cifrado).
+[2026-11-15 19:48:09 AR] TikTok: mando la historia 6 como borrador.
+[2026-11-15 19:48:34 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
