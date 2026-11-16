@@ -70,3 +70,12 @@
 [2026-11-15 23:31:34 AR] TikTok: hoy ya se mandó un borrador.
 [2026-11-16 02:00:01 AR] Faltan 16:59:58.926311 para las 19:00: demasiado temprano.
 [2026-11-16 02:00:01 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
+[2026-11-16 19:54:08 AR] Historia 7 «El invitado número catorce» (planeada 2026-11-16, intento 1).
+[2026-11-16 19:54:08 AR]   video OK: h264 1080x1920 18.9s 13.4 MB
+[2026-11-16 19:54:09 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-07.mp4
+[2026-11-16 19:54:12 AR]   contenedor creado: 18130914586884770
+[2026-11-16 19:54:52 AR] Historia 7 publicada (media_publish): media 18226161100341494
+[2026-11-16 19:54:53 AR]   comentario publicado (18121193293960487). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-16 19:54:54 AR]   TikTok: token renovado (guardado cifrado).
+[2026-11-16 19:54:54 AR] TikTok: mando la historia 7 como borrador.
+[2026-11-16 19:55:29 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
