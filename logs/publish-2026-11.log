@@ -89,3 +89,11 @@
 [2026-11-17 01:17:41 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
 [2026-11-17 03:49:18 AR] Faltan 15:10:41.153835 para las 19:00: demasiado temprano.
 [2026-11-17 03:49:19 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
+[2026-11-17 19:01:30 AR] Historia 8 «La nena que viajó por correo» (planeada 2026-11-17, intento 1).
+[2026-11-17 19:01:30 AR]   video OK: h264 1080x1920 18.8s 14.3 MB
+[2026-11-17 19:01:31 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-08.mp4
+[2026-11-17 19:01:34 AR]   contenedor creado: 18131046448884770
+[2026-11-17 19:02:14 AR] Historia 8 publicada (media_publish): media 18121819250106642
+[2026-11-17 19:02:16 AR]   comentario publicado (17957333052306831). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-17 19:02:16 AR] TikTok: mando la historia 8 como borrador.
+[2026-11-17 19:02:53 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
