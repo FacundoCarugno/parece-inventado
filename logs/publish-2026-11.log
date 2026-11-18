@@ -104,3 +104,11 @@
 [2026-11-18 00:16:43 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
 [2026-11-18 03:16:13 AR] Faltan 15:43:46.579436 para las 19:00: demasiado temprano.
 [2026-11-18 03:16:13 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
+[2026-11-18 19:01:57 AR] Historia 9 «El maratón en auto» (planeada 2026-11-18, intento 1).
+[2026-11-18 19:01:58 AR]   video OK: h264 1080x1920 19.8s 18.5 MB
+[2026-11-18 19:01:59 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-09.mp4
+[2026-11-18 19:02:02 AR]   contenedor creado: 18131161207884770
+[2026-11-18 19:02:54 AR] Historia 9 publicada (media_publish): media 18144951568722762
+[2026-11-18 19:02:58 AR]   comentario publicado (17909277909356601). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-18 19:02:58 AR] TikTok: mando la historia 9 como borrador.
+[2026-11-18 19:03:34 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
