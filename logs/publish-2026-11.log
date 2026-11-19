@@ -119,3 +119,11 @@
 [2026-11-18 23:55:13 AR] TikTok: hoy ya se mandó un borrador.
 [2026-11-19 03:08:50 AR] Faltan 15:51:09.348066 para las 19:00: demasiado temprano.
 [2026-11-19 03:08:50 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
+[2026-11-19 19:01:39 AR] Historia 10 «El kétchup que era remedio» (planeada 2026-11-19, intento 1).
+[2026-11-19 19:01:39 AR]   video OK: h264 1080x1920 19.6s 13.8 MB
+[2026-11-19 19:01:41 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-10.mp4
+[2026-11-19 19:01:43 AR]   contenedor creado: 18131269465884770
+[2026-11-19 19:02:25 AR] Historia 10 publicada (media_publish): media 18025829024945685
+[2026-11-19 19:02:28 AR]   comentario publicado (18052523483623193). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-19 19:02:28 AR] TikTok: mando la historia 10 como borrador.
+[2026-11-19 19:03:05 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
