@@ -149,3 +149,11 @@
 [2026-11-20 23:57:24 AR] TikTok: hoy ya se mandó un borrador.
 [2026-11-21 02:50:18 AR] Faltan 16:09:41.171722 para las 19:00: demasiado temprano.
 [2026-11-21 02:50:18 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
+[2026-11-21 19:01:58 AR] Historia 12 «El día que Suecia cambió de lado» (planeada 2026-11-21, intento 1).
+[2026-11-21 19:01:58 AR]   video OK: h264 1080x1920 20.1s 13.9 MB
+[2026-11-21 19:01:58 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-12.mp4
+[2026-11-21 19:02:01 AR]   contenedor creado: 18131502232884770
+[2026-11-21 19:02:40 AR] Historia 12 publicada (media_publish): media 18136360747873811
+[2026-11-21 19:02:42 AR]   comentario publicado (18067771805543722). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-21 19:02:42 AR] TikTok: mando la historia 12 como borrador.
+[2026-11-21 19:03:17 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
