@@ -164,3 +164,11 @@
 [2026-11-22 02:23:02 AR] Faltan 16:36:57.174797 para las 19:00: demasiado temprano.
 [2026-11-22 02:23:04 AR]   TikTok: token renovado (guardado cifrado).
 [2026-11-22 02:23:04 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
+[2026-11-22 19:02:00 AR] Historia 13 «La casa que llegó por catálogo» (planeada 2026-11-22, intento 1).
+[2026-11-22 19:02:00 AR]   video OK: h264 1080x1920 20.3s 17.2 MB
+[2026-11-22 19:02:01 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-13.mp4
+[2026-11-22 19:02:03 AR]   contenedor creado: 18131638777884770
+[2026-11-22 19:02:43 AR] Historia 13 publicada (media_publish): media 18029900171866490
+[2026-11-22 19:02:45 AR]   comentario publicado (17938543176412080). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-22 19:02:45 AR] TikTok: mando la historia 13 como borrador.
+[2026-11-22 19:03:21 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
