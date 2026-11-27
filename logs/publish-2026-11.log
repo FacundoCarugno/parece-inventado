@@ -238,3 +238,12 @@
 [2026-11-27 00:54:11 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
 [2026-11-27 03:58:05 AR] Faltan 15:01:54.466783 para las 19:00: demasiado temprano.
 [2026-11-27 03:58:05 AR] TikTok: no hay nada nuevo para mandar (primero se publica en Instagram).
+[2026-11-27 19:01:44 AR] Historia 18 «El caballo que hacía cuentas» (planeada 2026-11-27, intento 1).
+[2026-11-27 19:01:44 AR]   video OK: h264 1080x1920 21.9s 18.5 MB
+[2026-11-27 19:01:44 AR]   URL pública OK: https://facundocarugno.github.io/parece-inventado/videos/historia-18.mp4
+[2026-11-27 19:01:46 AR]   contenedor creado: 18132198670884770
+[2026-11-27 19:02:27 AR] Historia 18 publicada (media_publish): media 17919873642496506
+[2026-11-27 19:02:29 AR]   comentario publicado (18578443261073528). Fijarlo: a mano desde la app (la API no lo permite).
+[2026-11-27 19:02:30 AR]   TikTok: token renovado (guardado cifrado).
+[2026-11-27 19:02:30 AR] TikTok: mando la historia 18 como borrador.
+[2026-11-27 19:03:04 AR]   TikTok: borrador enviado (SEND_TO_USER_INBOX). Falta publicarlo desde la app con la descripción de hoy.html.
